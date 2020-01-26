@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "ch.epai.ict.m526.serie1.App",
+            "projectName": "ex1"
+        }
+    ]
+}

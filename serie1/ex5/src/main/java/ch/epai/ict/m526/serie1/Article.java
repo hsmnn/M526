@@ -1,6 +1,7 @@
 package ch.epai.ict.m526.serie1;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Article {
     private String id;
@@ -14,11 +15,13 @@ public class Article {
         setName(name);
         setPrice(price);
         setQuantity(quantity);
-        setArticle(articles);
+        setArticle();
     }
 
-    public void setArticle(ArrayList<Article> articles) {
-        this.articles = new ArrayList<Article>(articles);
+    Scanner clavier = new Scanner(System.in);
+
+    public void setArticle() {
+        this.articles = new ArrayList<Article>();
     }
 
     public void setId(String id) {
@@ -53,7 +56,9 @@ public class Article {
         return this.quantity;
     }
 
-    public String searchById(String id) {
+    public String searchById() {
+        System.out.print("Veuillez entrer l'id de l'article à rechercher: ");
+        String id = clavier.nextLine();
         String name = "";
         for (int i = 0; i < articles.size(); i += 1) {
             if (id == articles.get(i).getId()) {
@@ -82,12 +87,19 @@ public class Article {
     }
 
     public String priceIntervalle(int minPrice, int maxPrice) {
-        return "";
+        String artIntervalle = "";
+        for (int i = 0; i < articles.size(); i += 1){
+            int artPrice = articles.get(i).getPrice();
+            if ((artPrice > minPrice) && (artPrice < maxPrice)){
+                artIntervalle += articles.get(i);
+            }
+        }
+        return artIntervalle;
     }
 
     public void displayAllArticle() {
         for (int i = 0; i < articles.size(); i += 1){
-            
+            System.out.println(articles.get(i));
         }
     }
 

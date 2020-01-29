@@ -9,18 +9,13 @@ public class Article {
     private int price;
     private int quantity;
     private ArrayList<Article> articles;
+    Scanner clavier = new Scanner(System.in);
 
     Article(String name, String id, int price, int quantity) {
         setId(id);
         setName(name);
         setPrice(price);
         setQuantity(quantity);
-        setArticle();
-    }
-
-    Scanner clavier = new Scanner(System.in);
-
-    public void setArticle() {
         this.articles = new ArrayList<Article>();
     }
 
@@ -60,7 +55,7 @@ public class Article {
         System.out.println("Veuillez entrer l'id de l'article à rechercher: ");
         String id = clavier.nextLine();
         String name = "";
-        for (int i = 0; i < articles.size(); i += 1) {
+        for (int i = 0; i < this.articles.size(); i += 1) {
             if (id == articles.get(i).getId()) {
                 name = articles.get(i).getName();
             }
@@ -79,7 +74,7 @@ public class Article {
         System.out.println("L'article " + id + "a bien été supprimer");
     }
 
-    public String searchByName() {
+    public void searchByName() {
         System.out.println("Veuillez entrer le nom de l'article à rechercher: ");
         name = clavier.nextLine();
         String id = "";
@@ -88,7 +83,7 @@ public class Article {
                 id = articles.get(i).getId();
             }
         }
-        return "L'article recherché est: " + id;
+        System.out.println("L'article recherché est: " + id);
     }
 
     public void priceIntervalle() {
@@ -107,8 +102,8 @@ public class Article {
     }
 
     public void displayAllArticle() {
-        for (int i = 0; i < articles.size(); i += 1){
-            System.out.println(articles.get(i));
+        for (int i = 0; i < this.articles.size(); i += 1){
+            System.out.println(articles.get(i).getName());
         }
     }
 
@@ -175,5 +170,6 @@ public class Article {
         int quantity = clavier.nextInt();
         Article newArticle = new Article(name, id, price, quantity);
         System.out.println("L'article a bien été ajouté");
+        this.articles.add(newArticle);
     }
 }

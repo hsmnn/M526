@@ -6,7 +6,7 @@ public class LivreTest {
     public void setAndGetTitleTest() {
         String title = "Titre";
         String author = "Auteur";
-        int price = 42;
+        String price = "42";
         Livre livre = new Livre(title, author, price);
         String expected = "Titre";
         String actual = livre.getTitle();
@@ -17,7 +17,7 @@ public class LivreTest {
     public void setAndGetAuthorTest() {
         String title = "Titre";
         String author = "Auteur";
-        int price = 42;
+        String price = "42";
         Livre livre = new Livre(title, author, price);
         String expected = "Auteur";
         String actual = livre.getAuthor();
@@ -28,10 +28,10 @@ public class LivreTest {
     public void setAndGetPriceTest() {
         String title = "Titre";
         String author = "Auteur";
-        int price = 42;
+        String price = "42";
         Livre livre = new Livre(title, author, price);
-        int expected = 42;
-        int actual = livre.getPrice();
+        String expected = "42";
+        String actual = livre.getPrice();
 
         Assert.assertEquals(expected, actual);
     }
@@ -39,7 +39,7 @@ public class LivreTest {
     public void booksInfoTest() {
         String title = "Titre";
         String author = "Auteur";
-        int price = 42;
+        String price = "42";
         Livre livre = new Livre(title, author, price);
         String expected = "Titre: " + title + ", Auteur: " + author + ", Prix: " + price;
         String actual = livre.booksInfo();

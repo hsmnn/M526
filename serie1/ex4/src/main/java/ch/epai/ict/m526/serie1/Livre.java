@@ -3,9 +3,9 @@ package ch.epai.ict.m526.serie1;
 public class Livre {
     private String title;
     private String author;
-    private int price;
+    private String price;
 
-    Livre(String title, String author, int price){
+    Livre(String title, String author, String price){
         setTitle(title);
         setAuthor(author);
         setPrice(price);;
@@ -19,7 +19,7 @@ public class Livre {
         this.author = author;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -31,7 +31,7 @@ public class Livre {
         return this.author;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return this.price;
     }
 

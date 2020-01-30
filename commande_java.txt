@@ -4,6 +4,6 @@ java -cp target/ex1-1.0-SNAPSHOT.jar ch.epai.ict.m526.serie1.ex1.App
 créer 
 
 mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.1
-groupeID : ch.epai.ict.m526.serie1
+groupeID : ch.epai.ict.m526.serie2
 artifactif : ex1
 laisser vide le reste et accepter

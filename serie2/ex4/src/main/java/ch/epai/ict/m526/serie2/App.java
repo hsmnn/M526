@@ -18,7 +18,7 @@ public class App {
             tab[i] = min + (int) (Math.random() * max);
         }
         
-        System.out.println("Tableau initial : [" + SortInteger.afficherTab(tab) + "]");
+        System.out.println("Tableau initial : " + SortInteger.afficherTab(tab));
 
         switch (tri) {
         case 0:

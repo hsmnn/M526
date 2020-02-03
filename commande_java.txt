@@ -1,5 +1,5 @@
 mvn verify
-java -cp target/ex1-1.0-SNAPSHOT.jar ch.epai.ict.m526.serie1.ex1.App
+java -cp target/ex4-1.0-SNAPSHOT.jar ch.epai.ict.m526.serie2.ex4.App
 
 créer 
 

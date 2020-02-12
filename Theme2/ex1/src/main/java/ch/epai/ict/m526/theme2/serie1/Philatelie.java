@@ -37,6 +37,14 @@ class Timbre {
         this.valeurFaciale = VALEUR_TIMBRE_DEFAUT;
     }
 
+    /**
+     * La méthode vente calcule le prix de vente d'un timbre en fonction de son âge
+     * 
+     * @author Elie Hausmann
+     * @version 1.0
+     * @return le prix de vente en double
+     * @since 1.0
+     */
     public double vente() {
         int ageTimbre = ANNEE_COURANTE - this.anneeEmission;
         double prix = 0;
@@ -48,28 +56,76 @@ class Timbre {
         return prix;
     }
 
+    /**
+     * La méthode toString décrit un timbre en renvoyant son code, son année d'émission, son origine et sa valeur faciale
+     * 
+     * @author Elie Hausmann
+     * @version 1.0
+     * @return Une chaîne de caractère contanant la description du timbre
+     * @since 1.0
+     */
     public String toString() {
         return "Timbre de code " + this.code + " datant de " + this.anneeEmission + " (provenance de " + this.pays + ") ayant pour valeur faciale "
         + this.valeurFaciale + " francs.";
     }
 
+    /**
+     * La méthode age calcul l'âge du timbre en fonction de son année d'émission et de l'année courante
+     * 
+     * @author Elie Hausmann
+     * @version 1.0
+     * @return l'âge du timbre en int
+     * @since 1.0
+     */
     public int age() {
         int ageTimbre = ANNEE_COURANTE - this.anneeEmission;
         return ageTimbre;
     }
 
+    /**
+     * La methode getCode renvoi la variable membre code. C'est un getter.
+     * 
+     * @author Elie Hausmann
+     * @version 1.0
+     * @return la variable membre code
+     * @since 1.0
+     */
     public String getCode() {
         return this.code;
     }
 
+    /**
+     * La methode getAnnee renvoi la valeur de la variable membre anneeEmission. C'est un getter
+     * 
+     * @author Elie Hausmann
+     * @version 1.0
+     * @return la valeur de la variable membre anneeEmission
+     * @since 1.0
+     */
     public int getAnnee() {
         return this.anneeEmission;
     }
 
+    /**
+     * La methode getPays renvoi la valeur de la variable membre pays. C'est un getter
+     * 
+     * @author Elie Hausmann
+     * @version 1.0
+     * @return la valeur de la variable membre pays
+     * @since 1.0
+     */
     public String getPays() {
         return this.pays;
     }
 
+    /**
+     * La methode getValeurFaciale renvoi la valeur de la variable membre valeurFaciale. C'est un getter
+     * 
+     * @author Elie Hausmann
+     * @version 1.0
+     * @return la valeur de la variable membre valeurFaciale
+     * @since 1.0
+     */
     public double getValeurFaciale() {
         return this.valeurFaciale;
     }

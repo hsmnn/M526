@@ -2,15 +2,14 @@ package ch.epai.ict.m526.theme2.serie1;
 
 import java.util.ArrayList;
 
-public class Composee {
-    private String nom;
+public class Composee extends Piece {
     private int nombreMax;
-    ArrayList <Simple> piece;
+    private ArrayList <Piece> piece;
 
     Composee(String nom, int nombreMax) {
-        this.nom = nom;
+        super(nom);
         this.nombreMax = nombreMax;
-        piece = new ArrayList<Simple>();
+        piece = new ArrayList<Piece>();
     }
 
     public int tailleMax() {
@@ -25,14 +24,15 @@ public class Composee {
         }
     }
 
+    @Override
     public String toString() {
         String toString = "";
-        toString = this.nom;
+        toString = this.nom + " (";
         for (int i = 0; i < this.piece.size(); i += 1) {
             if (i + 1 == this.piece.size()){
-                toString += this.piece.get(i);
+                toString += this.piece.toString() + ")";
             } else {
-                toString += this.piece.get(i) + ", ";
+                toString += this.piece.toString() + ", ";
             }
         }
         return toString;

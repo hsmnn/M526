@@ -1,16 +1,15 @@
 package ch.epai.ict.m526.theme2.serie1;
 
-public class Simple {
-    private String nom;
+public class Simple extends Piece {
     private String orientation;
 
     Simple(String nom, String orientation) {
-        this.nom = nom;
+        super(nom);
         this.orientation = orientation;
     }
 
     Simple(String nom) {
-        this.nom = nom;
+        super(nom);
         this.orientation = "aucune";
     }
 
@@ -18,6 +17,7 @@ public class Simple {
         return this.orientation;
     }
 
+    @Override
     public String toString() {
         String toString = "";
         if (this.orientation == "aucune"){

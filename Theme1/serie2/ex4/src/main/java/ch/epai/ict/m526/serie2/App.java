@@ -10,14 +10,14 @@ public class App {
 
         System.out.println("Veuillez saisir la taille du tableau: ");
         int taille = clavier.nextInt();
-        System.out.println("Veuillez saisir l'orddre du tri (0 - croissant, 1 - décroissant): ");
+        System.out.println("Veuillez saisir l'orddre du tri (0 - croissant, 1 - décroissant, 2 - quitter): ");
         int tri = clavier.nextInt();
 
         int tab[] = new int[taille];
         for (int i = 0; i < taille; i += 1) {
             tab[i] = min + (int) (Math.random() * max);
         }
-        
+
         System.out.println("Tableau initial : " + SortInteger.afficherTab(tab));
 
         switch (tri) {
@@ -32,7 +32,6 @@ public class App {
         default:
             System.out.println("Entréé invalide.");
         }
-
         clavier.close();
     }
 }

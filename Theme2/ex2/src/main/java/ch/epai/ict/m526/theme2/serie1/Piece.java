@@ -1,7 +1,7 @@
 package ch.epai.ict.m526.theme2.serie1;
 
 public class Piece {
-    private String nom;
+    protected String nom;
 
     Piece(String nom) {
         this.nom = nom;

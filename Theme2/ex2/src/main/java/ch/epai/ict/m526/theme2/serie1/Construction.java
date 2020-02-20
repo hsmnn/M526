@@ -30,7 +30,9 @@ public class Construction {
 
     public String toString() {
         String toString ="";
-        //toString = maison.getPiece();
+        for (int i = 0; i < this.composants.size(); i += 1) {
+            toString += this.composants.get(i).getPiece().getNom() + " (quantite " + this.composants.get(i).getQuantite() + ")\n";
+        }
         return toString;
     }
 }

@@ -32,7 +32,7 @@ public class Construction {
         String toString ="";
         for (int i = 0; i < this.composants.size(); i += 1) {
             toString += this.composants.get(i).getPiece().toString() + " ";
-            toString += this.composants.get(i).getQuantite() + "\n";
+            //toString += this.composants.get(i).getQuantite() + "\n";
         }
         return toString;
     }

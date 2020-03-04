@@ -5,16 +5,18 @@ import java.util.ArrayList;
 public class Piece {
     protected String nom;
     protected ArrayList<Simple> composants;
-    protected ArrayList<Piece> pieces;
 
     Piece(String nom) {
         this.nom = nom;
-        pieces = new ArrayList<Piece>();
-        composants = new ArrayList<Simple>();
+        this.composants = new ArrayList<Simple>();
     }
 
     public String getNom() {
         return this.nom;
+    }
+
+    public int getSize() {
+        return this.composants.size();
     }
 
     public String toString() {

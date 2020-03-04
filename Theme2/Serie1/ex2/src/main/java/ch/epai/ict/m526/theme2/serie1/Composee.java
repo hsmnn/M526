@@ -23,18 +23,4 @@ public class Composee extends Piece {
             System.out.println("Construction impossible.");
         }
     }
-
-    @Override
-    public String toString() {
-        String toString = "";
-        toString = this.nom + " (";
-        for (int i = 0; i < this.composants.size(); i += 1) {
-            if (i + 1 == this.composants.size()){
-                toString += this.composants.get(i).toString() + ")";
-            } else {
-                toString += this.composants.get(i).toString() + ", ";
-            }
-        }
-        return toString;
-    }
 }

@@ -8,7 +8,7 @@ public class Article {
     private String name;
     private int price;
     private int quantity;
-    private ArrayList<Article> articles;
+    private ArrayList<Article> articles = new ArrayList<Article>();
     Scanner clavier = new Scanner(System.in);
 
     Article(String name, String id, int price, int quantity) {
@@ -16,7 +16,6 @@ public class Article {
         setName(name);
         setPrice(price);
         setQuantity(quantity);
-        this.articles = new ArrayList<Article>();
     }
 
     public void setId(String id) {

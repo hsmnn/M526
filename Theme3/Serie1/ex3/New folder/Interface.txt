@@ -1,0 +1,5 @@
+a) Compile et génère une erreur au lancement
+b) Ne compile pas
+c) Fonctionne parfaitement
+d) Ne compile pas
+e) Ne compile pas

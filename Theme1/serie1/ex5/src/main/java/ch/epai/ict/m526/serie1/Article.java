@@ -168,6 +168,7 @@ public class Article {
         System.out.println("Quantité: ");
         int quantity = clavier.nextInt();
         Article newArticle = new Article(name, id, price, quantity);
+        this.articles.add(newArticle);
         System.out.println("L'article a bien été ajouté");
         this.articles.add(newArticle);
     }

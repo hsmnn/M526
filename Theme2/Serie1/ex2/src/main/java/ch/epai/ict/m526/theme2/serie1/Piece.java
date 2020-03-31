@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class Piece {
     protected String nom;
-    protected ArrayList<Simple> composants;
+    protected ArrayList<Simple> composee;
 
     Piece(String nom) {
         this.nom = nom;
-        this.composants = new ArrayList<Simple>();
+        this.composee = new ArrayList<Simple>();
     }
 
     public String getNom() {
@@ -16,17 +16,17 @@ public class Piece {
     }
 
     public int getSize() {
-        return this.composants.size();
+        return this.composee.size();
     }
 
     public String toString() {
         String toString = this.nom;
-        for (int i = 0; i < composants.size(); i += 1) {
+        for (int i = 0; i < composee.size(); i += 1) {
             toString += " (";
-            if (i + 1 == composants.size()){
-                toString += composants.get(i).toString() + ")";
+            if (i + 1 == composee.size()){
+                toString += composee.get(i).toString() + ")";
             } else {
-                toString += composants.get(i).toString() + ", ";
+                toString += composee.get(i).toString() + ", ";
             }
         }
         return toString;

@@ -13,12 +13,12 @@ public class Composee extends Piece {
     }
 
     public int taille() {
-        return this.composants.size();
+        return this.composee.size();
     }
 
     public void construire(Simple piece){
-        if (this.composants.size() < nombreMax) {
-            this.composants.add(piece);
+        if (this.composee.size() < nombreMax) {
+            this.composee.add(piece);
         } else {
             System.out.println("Construction impossible.");
         }

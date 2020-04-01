@@ -19,15 +19,22 @@ public class Piece {
         return this.composee.size();
     }
 
+    public ArrayList<Simple> getComposee() {
+        return this.composee;
+    }
+
     public String toString() {
         String toString = this.nom;
-        for (int i = 0; i < composee.size(); i += 1) {
+        if (this.composee.size() > 0){
             toString += " (";
-            if (i + 1 == composee.size()){
-                toString += composee.get(i).toString() + ")";
-            } else {
-                toString += composee.get(i).toString() + ", ";
+            for (int i = 0; i < composee.size(); i += 1){
+                if (i + 1 == composee.size()){
+                    toString += composee.get(i).toString();
+                } else {
+                    toString += composee.get(i).toString() + ", ";
+                }
             }
+            toString += ")";
         }
         return toString;
     }

@@ -56,5 +56,9 @@ public class Polygone {
     public int getPerimeter() {
         return this.perimeter;
     }
+
+    public void toString(Polygone poly) {
+        System.out.println("Nom : " + poly.name + ", Nombre de côté : " + poly.numberSide + ", taille des côtés : " + poly.sizeSide);
+    }
 }
 

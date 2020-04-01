@@ -13,5 +13,8 @@ public class App
         pentagone.presqueClone(pentagone, "octogone", 6);
 
         pentagone.getAllDescription();
+
+        System.out.println("Le polygone le plus petit est:");
+        carre.plusPetit(carre, pentagone);
     }
 }

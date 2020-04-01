@@ -80,5 +80,13 @@ public class Polygone {
             System.out.println("Nom : " + this.listPolygone.get(i).getName() + ", nombre de côté : " + actu.getNumberSide() + ", taille des côtés : " + actu.getSizeSide() + ", périmètre : " + actu.getPerimeter());
         }
     }
+
+    public void plusPetit(Polygone poly1, Polygone poly2) {
+        if (poly1.perimeter < poly2.perimeter){
+            toString(poly1);
+        }else{
+            toString(poly2);
+        }
+    }
 }
 

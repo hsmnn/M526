@@ -21,7 +21,7 @@ public class Polygone {
         this.numberSide = numberSide;
         this.sizeSide = sizeSide;
         this.name = name;
-        this.perimeter = 0;
+        this.perimeter = perim();
         this.listPolygone = new ArrayList<Polygone>();
     }
 
@@ -58,7 +58,11 @@ public class Polygone {
     }
 
     public void toString(Polygone poly) {
-        System.out.println("Nom : " + poly.name + ", Nombre de côté : " + poly.numberSide + ", taille des côtés : " + poly.sizeSide);
+        System.out.println("Nom : " + poly.name + ", nombre de côté : " + poly.numberSide + ", taille des côtés : " + poly.sizeSide + ", périmètre : " + poly.perimeter);
+    }
+
+    public int perim() {
+        return this.numberSide * this.sizeSide;
     }
 }
 

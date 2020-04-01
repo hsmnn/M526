@@ -4,10 +4,14 @@ public class App
 {
     public static void main( String[] args )
     {
-        Polygone carre = new Polygone(4, 4, "Carré");
-        Polygone pentagone = new Polygone(5, 5, "Pentagone");
+        Polygone carre = new Polygone(4, 4, "carre");
+        Polygone pentagone = new Polygone(5, 5, "pentagone");
 
         pentagone.toString(pentagone);
         carre.toString(carre);
+
+        pentagone.presqueClone(pentagone, "octogone", 6);
+
+        pentagone.getAllDescription();
     }
 }

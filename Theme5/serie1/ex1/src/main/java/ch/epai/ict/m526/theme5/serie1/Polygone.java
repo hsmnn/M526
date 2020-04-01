@@ -64,5 +64,21 @@ public class Polygone {
     public int perim() {
         return this.numberSide * this.sizeSide;
     }
+
+    public void presqueClone(Polygone likeThisOne, String name, int numberSide) {
+        Polygone poly = new Polygone (numberSide, likeThisOne.sizeSide, name);
+        this.listPolygone.add(poly);
+    }
+
+    public void add(Polygone poly) {
+        this.listPolygone.add(poly);
+    }
+
+    public void getAllDescription() {
+        for (int i = 0; i < this.listPolygone.size(); i += 1) {
+            Polygone actu = this.listPolygone.get(i);
+            System.out.println("Nom : " + this.listPolygone.get(i).getName() + ", nombre de côté : " + actu.getNumberSide() + ", taille des côtés : " + actu.getSizeSide() + ", périmètre : " + actu.getPerimeter());
+        }
+    }
 }
 

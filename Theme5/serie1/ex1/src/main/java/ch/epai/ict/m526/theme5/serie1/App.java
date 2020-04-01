@@ -1,13 +1,12 @@
 package ch.epai.ict.m526.theme5.serie1;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Polygone carre = new Polygone(4, 4, "Carré");
+        Polygone pentagone = new Polygone(5, 5, "Pentagone");
+
+        System.out.print(carre.getName() + carre.getNumberSide() + carre.getPerimeter() + carre.getSizeSide());
     }
 }

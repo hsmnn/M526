@@ -7,7 +7,7 @@ public class App
     public static void main( String[] args ) {
         Scanner clavier = new Scanner(System.in);
         boolean quit  = false;
-        Article article = new Article("test", "0", 450, 30);
+        Program program = new Program();
         while(quit == false){
             System.out.println("1) Rechercher un article par référence \n2) Ajouter un article au stock en vérifiant l’unicité de la référence \n3) Supprimer un article par référence \n4) Modifier un article par référence \n5) Rechercher un article par nom \n6) Rechercher un article par intervalle de prix de vente \n7) Afficher tous les articles \n8) Quitter");
             System.out.println("Veuillez choisir une des ces options : \n");
@@ -15,26 +15,26 @@ public class App
     
             switch (choix) {
                 case 1 :
-                    article.searchById();
+                    program.searchById();
                     break;
                 case 2 :
-                    article.addArticle();
+                    program.addArticle();
                     break;
                 case 3 :
-                    article.removeArticleFromStock();
+                    program.removeArticleFromStock();
                     break;
                 case 4 :
-                    article.modifieArticle();
+                    program.modifieArticle();
                     break;
                 case 5 :
-                    article.searchByName();
+                    program.searchByName();
                     break;
                 case 6 :
-                    article.priceIntervalle();
+                    program.priceIntervalle();
                     break;
                 case 7 :
                     System.out.println("Voici la liste de tous les articles: ");
-                    article.displayAllArticle();
+                    program.displayAllArticle();
                     break;
                 case 8 :
                     quit = true;
